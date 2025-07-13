@@ -17,6 +17,7 @@ import Privacy from "@/pages/Privacy";
 import Terms from "@/pages/Terms";
 import Contact from "@/pages/Contact";
 import Help from "@/pages/Help";
+import Blog from "@/pages/Blog";
 
 // Get base path for GitHub Pages deployment
 const basePath = import.meta.env.PROD ? "/legal-docs-ai" : "";
@@ -42,10 +43,16 @@ function AppContent() {
               <div className="hidden md:block ml-10">
                 <div className="flex items-baseline space-x-8">
                   <Link href="/" className="text-neutral-600 hover:text-blue-600 px-3 py-2 text-sm font-medium">
-                    Document Generator
+                    Home
                   </Link>
                   <Link href="/templates" className="text-neutral-600 hover:text-blue-600 px-3 py-2 text-sm font-medium">
                     Templates
+                  </Link>
+                  <Link href="/blog" className="text-neutral-600 hover:text-blue-600 px-3 py-2 text-sm font-medium">
+                    Blog
+                  </Link>
+                  <Link href="/help" className="text-neutral-600 hover:text-blue-600 px-3 py-2 text-sm font-medium">
+                    Help
                   </Link>
                 </div>
               </div>
@@ -68,6 +75,7 @@ function AppContent() {
         <Route path="/terms" component={Terms} />
         <Route path="/contact" component={Contact} />
         <Route path="/help" component={Help} />
+        <Route path="/blog" component={Blog} />
         <Route component={NotFound} />
       </Switch>
 
@@ -125,24 +133,15 @@ function AppContent() {
                 <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
                 <li><Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
                 <li><Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link></li>
-                <li><a href="#" className="hover:text-white transition-colors">Security</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">API Documentation</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
+                <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
               </ul>
             </div>
           </div>
 
-          <div className="border-t border-neutral-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <div className="border-t border-neutral-700 pt-8 text-center">
             <p className="text-neutral-400 text-sm">
-              © 2025 LegalDocs AI. All rights reserved.
+              © 2025 LegalDocs AI. All rights reserved. | Professional legal document generation platform.
             </p>
-            <div className="flex items-center space-x-4 mt-4 md:mt-0">
-              <span className="text-neutral-400 text-sm">Powered by</span>
-              <div className="flex items-center space-x-2">
-                <i className="fas fa-robot text-blue-600"></i>
-                <span className="text-sm">Advanced AI Technology</span>
-              </div>
-            </div>
           </div>
         </div>
       </footer>
