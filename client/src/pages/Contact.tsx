@@ -3,11 +3,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { AdBanner } from "@/components/AdBanner";
+import { SEOHead, SEOConfigs } from "@/components/SEOHead";
 import { Mail, Phone, MapPin, Clock, MessageSquare, HelpCircle } from "lucide-react";
 
 export default function Contact() {
   return (
     <div className="min-h-screen bg-neutral-50">
+      <SEOHead {...SEOConfigs.contact} />
       {/* Header Ad */}
       <AdBanner size="leaderboard" className="max-w-7xl mx-auto px-4 py-2" />
 

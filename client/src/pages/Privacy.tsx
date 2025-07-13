@@ -1,10 +1,12 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { AdBanner } from "@/components/AdBanner";
+import { SEOHead, SEOConfigs } from "@/components/SEOHead";
 import { Shield, Eye, Lock, FileText } from "lucide-react";
 
 export default function Privacy() {
   return (
     <div className="min-h-screen bg-neutral-50">
+      <SEOHead {...SEOConfigs.privacy} />
       {/* Header Ad */}
       <AdBanner size="leaderboard" className="max-w-7xl mx-auto px-4 py-2" />
 

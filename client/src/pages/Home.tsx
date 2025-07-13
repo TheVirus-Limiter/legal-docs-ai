@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { AdBanner } from "@/components/AdBanner";
 import { DocumentGenerator } from "@/components/DocumentGenerator";
+import { SEOHead, SEOConfigs } from "@/components/SEOHead";
 import { FileText, Shield, Download, Clock, MapPin, Brain, Star, ChevronRight } from "lucide-react";
 import type { DocumentTemplate, BlogPost } from "@shared/schema";
 
@@ -29,6 +30,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-neutral-50">
+      <SEOHead {...SEOConfigs.home} />
       {/* Header Ad */}
       <AdBanner size="leaderboard" className="max-w-7xl mx-auto px-4 py-2" />
 

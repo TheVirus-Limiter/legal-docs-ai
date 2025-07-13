@@ -1,0 +1,88 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://thevirus-limiter.github.io/legal-docs-ai/sitemap.xml
+
+# Allow all search engines to crawl the site
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Crawl delay (optional - helps with server load)
+Crawl-delay: 1
+
+# Block access to admin areas (if any)
+Disallow: /admin/
+Disallow: /api/
+Disallow: /.git/
+Disallow: /node_modules/
+
+# Allow all static assets
+Allow: /assets/
+Allow: /images/
+Allow: /css/
+Allow: /js/
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.ico$
+Allow: /*.pdf$
+
+# Important pages for SEO
+Allow: /blog/
+Allow: /templates/
+Allow: /about
+Allow: /contact
+Allow: /help
+Allow: /privacy
+Allow: /terms
+
+# Additional SEO directives
+# These help search engines understand the site structure
+Allow: /sitemap.xml
+Allow: /robots.txt
+
+# Block any development or temporary files
+Disallow: /*.tmp$
+Disallow: /*.bak$
+Disallow: /*.log$
+Disallow: /test/
+Disallow: /dev/
+Disallow: /.env
+
+# Social media and sharing
+Allow: /share/
+Allow: /social/
+
+# RSS feeds (if implemented)
+Allow: /rss.xml
+Allow: /feed.xml
+Allow: /blog/rss.xml

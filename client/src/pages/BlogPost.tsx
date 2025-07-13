@@ -4,6 +4,7 @@ import { AdBanner } from "@/components/AdBanner";
 import { useQuery } from "@tanstack/react-query";
 import { Calendar, User, Eye, ArrowLeft, Clock } from "lucide-react";
 import { Link, useParams } from "wouter";
+import { SEOHead, createBlogPostSEO } from "@/components/SEOHead";
 // Simple markdown-like content renderer
 
 interface BlogPost {
@@ -57,6 +58,7 @@ export default function BlogPost() {
 
   return (
     <div className="min-h-screen bg-neutral-50">
+      {post && <SEOHead {...createBlogPostSEO(post)} />}
       {/* Header Ad */}
       <AdBanner size="leaderboard" className="max-w-7xl mx-auto px-4 py-2" />
 
