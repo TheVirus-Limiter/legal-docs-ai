@@ -36,22 +36,13 @@ function Router() {
                   <a href="/templates" className="text-neutral-600 hover:text-blue-600 px-3 py-2 text-sm font-medium">
                     Templates
                   </a>
-                  <a href="/blog" className="text-neutral-600 hover:text-blue-600 px-3 py-2 text-sm font-medium">
-                    Legal Guides
-                  </a>
-                  <a href="/states" className="text-neutral-600 hover:text-blue-600 px-3 py-2 text-sm font-medium">
-                    State-Specific
-                  </a>
                 </div>
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <button className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">
+              <a href="#generator" className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">
                 Get Started Free
-              </button>
-              <button className="md:hidden">
-                <i className="fas fa-bars text-neutral-600"></i>
-              </button>
+              </a>
             </div>
           </div>
         </nav>
@@ -60,8 +51,6 @@ function Router() {
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/templates" component={DocumentTypes} />
-        <Route path="/states/:state" component={StateGuide} />
-        <Route path="/blog/:slug" component={BlogPost} />
         <Route component={NotFound} />
       </Switch>
 
@@ -92,24 +81,24 @@ function Router() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Document Types</h4>
               <ul className="space-y-2 text-neutral-300">
-                <li><a href="#" className="hover:text-white transition-colors">Employment Contracts</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">NDA Agreements</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Service Contracts</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Lease Agreements</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Business Formation</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Privacy Policies</a></li>
+                <li><a href="#generator" className="hover:text-white transition-colors">Employment Contracts</a></li>
+                <li><a href="#generator" className="hover:text-white transition-colors">NDA Agreements</a></li>
+                <li><a href="#generator" className="hover:text-white transition-colors">Service Contracts</a></li>
+                <li><a href="#generator" className="hover:text-white transition-colors">Partnership Agreements</a></li>
+                <li><a href="#generator" className="hover:text-white transition-colors">Business Formation</a></li>
+                <li><a href="#generator" className="hover:text-white transition-colors">Legal Templates</a></li>
               </ul>
             </div>
 
             <div>
               <h4 className="text-lg font-semibold mb-4">Resources</h4>
               <ul className="space-y-2 text-neutral-300">
-                <li><a href="#" className="hover:text-white transition-colors">Legal Guides</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">State Requirements</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Document Templates</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">AI Technology</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Help Center</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Contact Support</a></li>
+                <li><a href="/templates" className="hover:text-white transition-colors">Document Templates</a></li>
+                <li><a href="#generator" className="hover:text-white transition-colors">AI Document Generator</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Free Legal Documents</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Business Contracts</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Employment Forms</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Privacy Policies</a></li>
               </ul>
             </div>
 

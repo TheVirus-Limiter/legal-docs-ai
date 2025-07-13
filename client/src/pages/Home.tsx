@@ -51,10 +51,10 @@ export default function Home() {
                     Start Generating Documents
                   </Button>
                 </Link>
-                <Link href="/templates">
-                  <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-600">
-                    <FileText className="w-5 h-5 mr-2" />
-                    Browse Templates
+                <Link href="#generator">
+                  <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 bg-transparent">
+                    <FileText className="w-5 h-5 mr-2 text-white" />
+                    <span className="text-white">Browse Templates</span>
                   </Button>
                 </Link>
               </div>
@@ -312,60 +312,9 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-12">
-            <Link href="/templates">
+            <Link href="#generator">
               <Button variant="outline" size="lg" className="border-neutral-800 text-neutral-800 hover:bg-neutral-800 hover:text-white">
-                View All Templates (50+)
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Blog Section */}
-      <section id="blog" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-neutral-800 mb-4">
-              Legal Guides & Resources
-            </h2>
-            <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
-              Expert insights and guides to help you understand legal documents and business compliance
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts?.slice(0, 6).map((post) => (
-              <Card key={post.id} className="overflow-hidden hover:shadow-md transition-shadow">
-                {post.featuredImage && (
-                  <img 
-                    src={`${post.featuredImage}?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=400`}
-                    alt={post.title}
-                    className="w-full h-48 object-cover"
-                  />
-                )}
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-3">
-                    <span className="bg-blue-600 text-white text-xs px-2 py-1 rounded mr-2">
-                      {post.category}
-                    </span>
-                    <span className="text-xs text-neutral-500">{post.readTime} min read</span>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">{post.title}</h3>
-                  <p className="text-neutral-600 mb-4">{post.excerpt}</p>
-                  <Link href={`/blog/${post.slug}`}>
-                    <Button variant="ghost" className="text-blue-600 hover:text-blue-700 p-0">
-                      Read More <ChevronRight className="w-4 h-4 ml-1" />
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link href="/blog">
-              <Button variant="outline" size="lg" className="border-neutral-800 text-neutral-800 hover:bg-neutral-800 hover:text-white">
-                View All Articles (20+)
+                Generate Documents Now
               </Button>
             </Link>
           </div>
@@ -406,9 +355,9 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-12">
-            <Link href="/states">
+            <Link href="#generator">
               <Button variant="outline" size="lg" className="border-neutral-800 text-neutral-800 hover:bg-neutral-800 hover:text-white">
-                View All 50 States
+                Start Generating Documents
               </Button>
             </Link>
           </div>
