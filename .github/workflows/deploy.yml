@@ -42,17 +42,17 @@ jobs:
         
       - name: Build for GitHub Pages
         run: |
-          npm run build:pages
+          chmod +x ./build-pages.sh
+          ./build-pages.sh
         env:
           NODE_ENV: production
           VITE_GA_MEASUREMENT_ID: ${{ secrets.VITE_GA_MEASUREMENT_ID }}
           
-      - name: Generate sitemap and robots.txt
+      - name: Verify build files
         run: |
-          # Copy sitemap and robots.txt to dist
-          cp client/public/sitemap.xml dist/
-          cp client/public/robots.txt dist/
-          cp client/public/manifest.json dist/
+          # List generated files for verification
+          ls -la dist/
+          echo "Build completed successfully"
           
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
