@@ -3,6 +3,7 @@ import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { CookieConsent } from "@/components/CookieConsent";
 import { useEffect } from "react";
 import { initGA } from "./lib/analytics";
 import { useAnalytics } from "./hooks/use-analytics";
@@ -11,6 +12,11 @@ import Home from "@/pages/Home";
 import DocumentTypes from "@/pages/DocumentTypes";
 import StateGuide from "@/pages/StateGuide";
 import BlogPost from "@/pages/BlogPost";
+import About from "@/pages/About";
+import Privacy from "@/pages/Privacy";
+import Terms from "@/pages/Terms";
+import Contact from "@/pages/Contact";
+import Help from "@/pages/Help";
 
 // Get base path for GitHub Pages deployment
 const basePath = import.meta.env.PROD ? "/legal-docs-ai" : "";
@@ -57,6 +63,11 @@ function AppContent() {
         <Route path="/" component={Home} />
         <Route path="/templates" component={DocumentTypes} />
         <Route path="/generator" component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/privacy" component={Privacy} />
+        <Route path="/terms" component={Terms} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/help" component={Help} />
         <Route component={NotFound} />
       </Switch>
 
@@ -111,9 +122,9 @@ function AppContent() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Company</h4>
               <ul className="space-y-2 text-neutral-300">
-                <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
+                <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
+                <li><Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
+                <li><Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link></li>
                 <li><a href="#" className="hover:text-white transition-colors">Security</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">API Documentation</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
@@ -156,6 +167,7 @@ function App() {
         <Router base={basePath}>
           <AppContent />
         </Router>
+        <CookieConsent />
         <Toaster />
       </TooltipProvider>
     </QueryClientProvider>
