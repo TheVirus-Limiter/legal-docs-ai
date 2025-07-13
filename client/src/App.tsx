@@ -1,4 +1,4 @@
-import { Switch, Route } from "wouter";
+import { Switch, Route, Link } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -24,25 +24,27 @@ function Router() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <h1 className="text-2xl font-bold text-blue-600">
-                  <i className="fas fa-file-contract mr-2"></i>LegalDocs AI
-                </h1>
+                <Link href="/">
+                  <h1 className="text-2xl font-bold text-blue-600 cursor-pointer">
+                    <i className="fas fa-file-contract mr-2"></i>LegalDocs AI
+                  </h1>
+                </Link>
               </div>
               <div className="hidden md:block ml-10">
                 <div className="flex items-baseline space-x-8">
-                  <a href="#generator" className="text-neutral-600 hover:text-blue-600 px-3 py-2 text-sm font-medium">
+                  <Link href="/" className="text-neutral-600 hover:text-blue-600 px-3 py-2 text-sm font-medium">
                     Document Generator
-                  </a>
-                  <a href="/templates" className="text-neutral-600 hover:text-blue-600 px-3 py-2 text-sm font-medium">
+                  </Link>
+                  <Link href="/templates" className="text-neutral-600 hover:text-blue-600 px-3 py-2 text-sm font-medium">
                     Templates
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <a href="#generator" className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">
+              <Link href="/" className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">
                 Get Started Free
-              </a>
+              </Link>
             </div>
           </div>
         </nav>
@@ -51,6 +53,7 @@ function Router() {
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/templates" component={DocumentTypes} />
+        <Route path="/generator" component={Home} />
         <Route component={NotFound} />
       </Switch>
 
@@ -81,24 +84,24 @@ function Router() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Document Types</h4>
               <ul className="space-y-2 text-neutral-300">
-                <li><a href="#generator" className="hover:text-white transition-colors">Employment Contracts</a></li>
-                <li><a href="#generator" className="hover:text-white transition-colors">NDA Agreements</a></li>
-                <li><a href="#generator" className="hover:text-white transition-colors">Service Contracts</a></li>
-                <li><a href="#generator" className="hover:text-white transition-colors">Partnership Agreements</a></li>
-                <li><a href="#generator" className="hover:text-white transition-colors">Business Formation</a></li>
-                <li><a href="#generator" className="hover:text-white transition-colors">Legal Templates</a></li>
+                <li><Link href="/" className="hover:text-white transition-colors">Employment Contracts</Link></li>
+                <li><Link href="/" className="hover:text-white transition-colors">NDA Agreements</Link></li>
+                <li><Link href="/" className="hover:text-white transition-colors">Service Contracts</Link></li>
+                <li><Link href="/" className="hover:text-white transition-colors">Partnership Agreements</Link></li>
+                <li><Link href="/" className="hover:text-white transition-colors">Business Formation</Link></li>
+                <li><Link href="/" className="hover:text-white transition-colors">Legal Templates</Link></li>
               </ul>
             </div>
 
             <div>
               <h4 className="text-lg font-semibold mb-4">Resources</h4>
               <ul className="space-y-2 text-neutral-300">
-                <li><a href="/templates" className="hover:text-white transition-colors">Document Templates</a></li>
-                <li><a href="#generator" className="hover:text-white transition-colors">AI Document Generator</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Free Legal Documents</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Business Contracts</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Employment Forms</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Privacy Policies</a></li>
+                <li><Link href="/templates" className="hover:text-white transition-colors">Document Templates</Link></li>
+                <li><Link href="/" className="hover:text-white transition-colors">AI Document Generator</Link></li>
+                <li><Link href="/" className="hover:text-white transition-colors">Free Legal Documents</Link></li>
+                <li><Link href="/" className="hover:text-white transition-colors">Business Contracts</Link></li>
+                <li><Link href="/" className="hover:text-white transition-colors">Employment Forms</Link></li>
+                <li><Link href="/" className="hover:text-white transition-colors">Privacy Policies</Link></li>
               </ul>
             </div>
 

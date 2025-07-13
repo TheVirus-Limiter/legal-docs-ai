@@ -45,13 +45,13 @@ export default function Home() {
                 Create contracts, business forms, and legal documents in minutes. State-specific compliance, AI-powered customization, completely free.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <Link href="#generator">
+                <a href="#generator">
                   <Button size="lg" className="bg-green-600 text-white hover:bg-green-700">
                     <FileText className="w-5 h-5 mr-2" />
                     Start Generating Documents
                   </Button>
-                </Link>
-                <Link href="#generator">
+                </a>
+                <Link href="/templates">
                   <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 bg-transparent group">
                     <FileText className="w-5 h-5 mr-2 text-white group-hover:text-blue-600" />
                     <span className="text-white group-hover:text-blue-600">Browse Templates</span>

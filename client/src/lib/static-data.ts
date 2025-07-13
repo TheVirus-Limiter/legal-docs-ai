@@ -67,6 +67,76 @@ export const staticTemplates = [
     estimatedTime: 7,
     id: 4,
     popularity: 0
+  },
+  {
+    type: "llc",
+    name: "LLC Operating Agreement",
+    description: "Limited liability company formation documents and operating agreements.",
+    fields: {
+      companyName: { type: "text", required: true, label: "Company Name" },
+      member1Name: { type: "text", required: true, label: "Member 1 Name" },
+      member1Percentage: { type: "text", required: true, label: "Member 1 Ownership %" },
+      member2Name: { type: "text", required: false, label: "Member 2 Name" },
+      member2Percentage: { type: "text", required: false, label: "Member 2 Ownership %" },
+      businessPurpose: { type: "textarea", required: true, label: "Business Purpose" },
+      managementStructure: { type: "select", required: true, label: "Management Structure", options: ["member-managed", "manager-managed"] },
+      capitalContribution: { type: "text", required: true, label: "Total Capital Contribution" }
+    },
+    estimatedTime: 6,
+    id: 5,
+    popularity: 0
+  },
+  {
+    type: "privacy",
+    name: "Privacy Policy",
+    description: "GDPR and CCPA compliant privacy policies for websites and applications.",
+    fields: {
+      companyName: { type: "text", required: true, label: "Company Name" },
+      websiteUrl: { type: "text", required: true, label: "Website URL" },
+      contactEmail: { type: "text", required: true, label: "Contact Email" },
+      dataCollected: { type: "textarea", required: true, label: "Data Collected" },
+      dataUsage: { type: "textarea", required: true, label: "How Data is Used" },
+      thirdPartyServices: { type: "textarea", required: true, label: "Third-Party Services" },
+      cookieUsage: { type: "select", required: true, label: "Cookie Usage", options: ["analytics", "marketing", "essential", "all"] }
+    },
+    estimatedTime: 5,
+    id: 6,
+    popularity: 0
+  },
+  {
+    type: "terms",
+    name: "Terms of Service",
+    description: "Website and application terms of service agreements for user compliance.",
+    fields: {
+      companyName: { type: "text", required: true, label: "Company Name" },
+      websiteUrl: { type: "text", required: true, label: "Website/Service URL" },
+      serviceDescription: { type: "textarea", required: true, label: "Service Description" },
+      userObligations: { type: "textarea", required: true, label: "User Obligations" },
+      prohibitedActivities: { type: "textarea", required: true, label: "Prohibited Activities" },
+      paymentTerms: { type: "textarea", required: false, label: "Payment Terms (if applicable)" },
+      terminationConditions: { type: "textarea", required: true, label: "Termination Conditions" }
+    },
+    estimatedTime: 5,
+    id: 7,
+    popularity: 0
+  },
+  {
+    type: "contractor",
+    name: "Independent Contractor Agreement",
+    description: "Freelance and independent contractor agreements with clear terms and deliverables.",
+    fields: {
+      contractorName: { type: "text", required: true, label: "Contractor Name" },
+      clientName: { type: "text", required: true, label: "Client Name" },
+      projectDescription: { type: "textarea", required: true, label: "Project Description" },
+      deliverables: { type: "textarea", required: true, label: "Deliverables" },
+      paymentAmount: { type: "text", required: true, label: "Payment Amount" },
+      paymentSchedule: { type: "select", required: true, label: "Payment Schedule", options: ["milestone", "hourly", "fixed", "monthly"] },
+      deadline: { type: "date", required: true, label: "Project Deadline" },
+      intellectualProperty: { type: "textarea", required: true, label: "Intellectual Property Rights" }
+    },
+    estimatedTime: 4,
+    id: 8,
+    popularity: 0
   }
 ];
 
