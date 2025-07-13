@@ -76,6 +76,7 @@ function AppContent() {
         <Route path="/contact" component={Contact} />
         <Route path="/help" component={Help} />
         <Route path="/blog" component={Blog} />
+        <Route path="/blog/:slug" component={BlogPost} />
         <Route component={NotFound} />
       </Switch>
 
