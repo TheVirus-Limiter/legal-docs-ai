@@ -52,9 +52,9 @@ export default function Home() {
                   </Button>
                 </Link>
                 <Link href="#generator">
-                  <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 bg-transparent">
-                    <FileText className="w-5 h-5 mr-2 text-white" />
-                    <span className="text-white">Browse Templates</span>
+                  <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 bg-transparent group">
+                    <FileText className="w-5 h-5 mr-2 text-white group-hover:text-blue-600" />
+                    <span className="text-white group-hover:text-blue-600">Browse Templates</span>
                   </Button>
                 </Link>
               </div>

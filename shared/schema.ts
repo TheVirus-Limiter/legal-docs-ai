@@ -82,7 +82,11 @@ export const insertBlogPostSchema = createInsertSchema(blogPosts).omit({
 
 // Document generation request schema
 export const generateDocumentSchema = z.object({
-  type: z.enum(['employment', 'nda', 'service', 'lease', 'llc', 'privacy', 'terms', 'will']),
+  type: z.enum([
+    'employment', 'nda', 'service', 'partnership', 'lease', 'llc', 
+    'privacy', 'terms', 'contractor', 'vendor', 'consulting', 
+    'purchase', 'license', 'franchise', 'distribution', 'loan'
+  ]),
   state: z.string().min(2).max(2),
   formData: z.record(z.any()),
 });
