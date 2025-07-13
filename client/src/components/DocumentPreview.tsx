@@ -91,9 +91,21 @@ export function DocumentPreview({ documentId, title, content, onClose }: Documen
                 <div 
                   className="whitespace-pre-wrap"
                   style={{ fontFamily: 'Times New Roman, serif' }}
-                >
-                  {editedContent}
-                </div>
+                  dangerouslySetInnerHTML={{ 
+                    __html: editedContent
+                      .replace(/^# (.*$)/gm, '<h1 class="text-2xl font-bold text-black mb-4 mt-6">$1</h1>')
+                      .replace(/^## (.*$)/gm, '<h2 class="text-xl font-bold text-black mb-3 mt-5">$1</h2>')
+                      .replace(/^### (.*$)/gm, '<h3 class="text-lg font-semibold text-black mb-2 mt-4">$1</h3>')
+                      .replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold text-black">$1</strong>')
+                      .replace(/\*(.*?)\*/g, '<em class="italic">$1</em>')
+                      .replace(/^\- (.*$)/gm, '<li class="leading-relaxed mb-1 ml-4">$1</li>')
+                      .replace(/^(\d+)\. (.*$)/gm, '<li class="leading-relaxed mb-1 ml-4">$2</li>')
+                      .replace(/(<li.*?>.*?<\/li>)/gms, '<ul class="list-disc list-inside mb-3 space-y-1">$1</ul>')
+                      .replace(/\n\n/g, '</p><p class="mb-3 leading-relaxed">')
+                      .replace(/^(?!<[h|u|l])/gm, '<p class="mb-3 leading-relaxed">')
+                      .replace(/$(?![<\/])/gm, '</p>')
+                  }}
+                />
               </div>
             )}
           </div>

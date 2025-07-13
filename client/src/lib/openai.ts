@@ -45,6 +45,20 @@ export function generatePDF(content: string, title: string): void {
   const printWindow = window.open('', '_blank');
   if (!printWindow) return;
 
+  // Convert markdown to HTML for printing
+  const formattedContent = content
+    .replace(/^# (.*$)/gm, '<h1 style="text-align: center; text-transform: uppercase; font-size: 18px; margin: 2em 0 1em 0;">$1</h1>')
+    .replace(/^## (.*$)/gm, '<h2 style="font-size: 16px; margin: 1.5em 0 1em 0;">$1</h2>')
+    .replace(/^### (.*$)/gm, '<h3 style="font-size: 14px; margin: 1em 0 0.5em 0;">$1</h3>')
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.*?)\*/g, '<em>$1</em>')
+    .replace(/^\- (.*$)/gm, '<li>$1</li>')
+    .replace(/^(\d+)\. (.*$)/gm, '<li>$2</li>')
+    .replace(/(<li>.*?<\/li>)/gms, '<ul style="margin: 1em 0; padding-left: 2em;">$1</ul>')
+    .replace(/\n\n/g, '</p><p style="margin-bottom: 1em; text-align: justify;">')
+    .replace(/^(?!<[h|u|l])/gm, '<p style="margin-bottom: 1em; text-align: justify;">')
+    .replace(/$(?![<\/])/gm, '</p>');
+
   printWindow.document.write(`
     <!DOCTYPE html>
     <html>
@@ -59,17 +73,12 @@ export function generatePDF(content: string, title: string): void {
         }
         h1, h2, h3 {
           color: #000;
-          margin-top: 2em;
-          margin-bottom: 1em;
         }
-        h1 {
-          text-align: center;
-          text-transform: uppercase;
-          font-size: 18px;
+        ul {
+          list-style-type: disc;
         }
-        p {
-          margin-bottom: 1em;
-          text-align: justify;
+        li {
+          margin-bottom: 0.5em;
         }
         .signature-line {
           border-bottom: 1px solid #000;
@@ -88,7 +97,7 @@ export function generatePDF(content: string, title: string): void {
       </style>
     </head>
     <body>
-      ${content.replace(/\n/g, '<br>')}
+      ${formattedContent}
     </body>
     </html>
   `);
