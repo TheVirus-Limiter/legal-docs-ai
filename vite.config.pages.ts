@@ -13,7 +13,7 @@ export default defineConfig({
   
   // Build configuration optimized for GitHub Pages
   build: {
-    outDir: 'dist',
+    outDir: '../dist',
     assetsDir: 'assets',
     sourcemap: false,
     minify: 'esbuild',

@@ -26,39 +26,31 @@ cat > dist/favicon.svg << 'EOF'
 </svg>
 EOF
 
-# Create 404.html for SPA routing
+# Create 404.html for SPA routing - copy main index.html for proper SPA support
 echo "Creating 404.html for SPA routing..."
-cat > dist/404.html << 'EOF'
+if [ -f "dist/index.html" ]; then
+  cp dist/index.html dist/404.html
+  echo "✓ 404.html created as copy of index.html for SPA routing"
+else
+  echo "⚠ Warning: index.html not found, creating fallback 404.html"
+  cat > dist/404.html << 'EOF'
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page Not Found - LegalDocs AI</title>
-    <style>
-      body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 2rem; text-align: center; background: #f8fafc; }
-      .container { max-width: 600px; margin: 0 auto; }
-      h1 { color: #1e293b; margin-bottom: 1rem; }
-      p { color: #64748b; margin-bottom: 2rem; }
-      a { color: #2563eb; text-decoration: none; }
-      a:hover { text-decoration: underline; }
-    </style>
+    <title>LegalDocs AI - Loading...</title>
     <script>
-      const path = window.location.pathname.replace('/legal-docs-ai', '');
-      if (path && path !== '/') {
-        window.location.href = '/legal-docs-ai/#' + path;
-      }
+      // Redirect to main app for SPA routing
+      window.location.href = '/legal-docs-ai/';
     </script>
   </head>
   <body>
-    <div class="container">
-      <h1>Page Not Found</h1>
-      <p>The page you're looking for doesn't exist or has been moved.</p>
-      <a href="/legal-docs-ai/">Return to Homepage</a>
-    </div>
+    <div>Loading...</div>
   </body>
 </html>
 EOF
+fi
 
 # Create .nojekyll file
 touch dist/.nojekyll

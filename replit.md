@@ -147,6 +147,9 @@ Preferred communication style: Simple, everyday language.
 - Automatic page view tracking and event tracking for document generation
 - Fixed GitHub Actions workflow to use ./build-pages.sh instead of npm run build:pages
 - Updated deployment workflow for proper GitHub Pages static site generation
+- Fixed Vite build configuration to output files to correct directory for GitHub Pages
+- Fixed SPA routing by using index.html as 404.html for proper client-side routing
+- Resolved "Page Not Found" issue on GitHub Pages deployment
 
 ### AI Simplification
 - Simplified to use only OpenAI API (ChatGPT) instead of multiple legal APIs
