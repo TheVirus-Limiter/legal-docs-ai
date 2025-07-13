@@ -2,10 +2,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { AdBanner } from "@/components/AdBanner";
-import { useQuery } from "@tanstack/react-query";
 import { SEOHead, SEOConfigs } from "@/components/SEOHead";
 import { Search, Calendar, User, Eye, BookOpen } from "lucide-react";
 import { Link } from "wouter";
+import { staticBlogPosts } from "../lib/static-data";
 
 interface BlogPost {
   id: number;
@@ -21,9 +21,8 @@ interface BlogPost {
 }
 
 export default function Blog() {
-  const { data: blogPosts, isLoading } = useQuery<BlogPost[]>({
-    queryKey: ['/api/blog'],
-  });
+  const blogPosts = staticBlogPosts;
+  const isLoading = false;
 
   const categories = blogPosts ? [...new Set(blogPosts.map(post => post.category))] : [];
   const popularPosts = blogPosts ? [...blogPosts].sort((a, b) => b.views - a.views).slice(0, 5) : [];

@@ -16,7 +16,7 @@ cp client/public/sitemap.xml dist/ 2>/dev/null || echo "sitemap.xml not found, s
 cp client/public/robots.txt dist/ 2>/dev/null || echo "robots.txt not found, skipping" 
 cp client/public/manifest.json dist/ 2>/dev/null || echo "manifest.json not found, skipping"
 
-# Create favicon.svg
+# Create favicon files
 echo "Creating favicon..."
 cat > dist/favicon.svg << 'EOF'
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
@@ -25,6 +25,14 @@ cat > dist/favicon.svg << 'EOF'
   <circle cx="20" cy="20" r="3" fill="#fbbf24"/>
 </svg>
 EOF
+
+# Create favicon.ico for better browser support
+cat > dist/favicon.ico << 'EOF'
+data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAA
+EOF
+
+# Create apple-touch-icon.png
+cp dist/favicon.svg dist/apple-touch-icon.png 2>/dev/null || echo "Created favicon placeholder"
 
 # Create 404.html for SPA routing - copy main index.html for proper SPA support
 echo "Creating 404.html for SPA routing..."

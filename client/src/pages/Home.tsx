@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { useQuery } from "@tanstack/react-query";
+import { staticTemplates, staticBlogPosts } from "../lib/static-data";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { AdBanner } from "@/components/AdBanner";
@@ -9,13 +9,8 @@ import { FileText, Shield, Download, Clock, MapPin, Brain, Star, ChevronRight } 
 import type { DocumentTemplate, BlogPost } from "@shared/schema";
 
 export default function Home() {
-  const { data: templates } = useQuery<DocumentTemplate[]>({
-    queryKey: ['/api/templates'],
-  });
-
-  const { data: blogPosts } = useQuery<BlogPost[]>({
-    queryKey: ['/api/blog'],
-  });
+  const templates = staticTemplates as DocumentTemplate[];
+  const blogPosts = staticBlogPosts;
 
   const usStates = [
     { code: 'CA', name: 'California', docs: 245 },

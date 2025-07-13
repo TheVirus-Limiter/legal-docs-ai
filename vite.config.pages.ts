@@ -78,11 +78,14 @@ export default defineConfig({
     open: true
   },
   
-  // Define environment variables
+  // Define environment variables  
   define: {
     __APP_VERSION__: JSON.stringify(process.env.npm_package_version || '1.0.0'),
     __BUILD_DATE__: JSON.stringify(new Date().toISOString())
   },
+  
+  // Environment variables for GitHub Pages
+  envDir: '.',
   
   // Optimize dependencies
   optimizeDeps: {

@@ -1,10 +1,10 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { AdBanner } from "@/components/AdBanner";
-import { useQuery } from "@tanstack/react-query";
 import { Calendar, User, Eye, ArrowLeft, Clock } from "lucide-react";
 import { Link, useParams } from "wouter";
 import { SEOHead, createBlogPostSEO } from "@/components/SEOHead";
+import { staticBlogPosts } from "../lib/static-data";
 // Simple markdown-like content renderer
 
 interface BlogPost {
@@ -23,10 +23,8 @@ interface BlogPost {
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
   
-  const { data: blogPosts, isLoading } = useQuery<BlogPost[]>({
-    queryKey: ['/api/blog'],
-  });
-
+  const blogPosts = staticBlogPosts;
+  const isLoading = false;
   const post = blogPosts?.find(p => p.slug === slug);
 
   if (isLoading) {

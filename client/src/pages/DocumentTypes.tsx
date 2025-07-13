@@ -1,16 +1,15 @@
-import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { AdBanner } from "@/components/AdBanner";
 import { FileText, Clock, Users, Star } from "lucide-react";
+import { staticTemplates } from "../lib/static-data";
 import type { DocumentTemplate } from "@shared/schema";
 
 export default function DocumentTypes() {
-  const { data: templates, isLoading } = useQuery<DocumentTemplate[]>({
-    queryKey: ['/api/templates'],
-  });
+  const templates = staticTemplates as DocumentTemplate[];
+  const isLoading = false;
 
   if (isLoading) {
     return (
