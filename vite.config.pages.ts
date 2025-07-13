@@ -11,16 +11,7 @@ export default defineConfig({
     outDir: '../dist',
     assetsDir: 'assets',
     sourcemap: false,
-    minify: 'esbuild',
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          ui: ['@radix-ui/react-dialog', '@radix-ui/react-select', '@radix-ui/react-button'],
-          utils: ['clsx', 'tailwind-merge', 'date-fns']
-        }
-      }
-    }
+    minify: 'esbuild'
   },
   resolve: {
     alias: {
