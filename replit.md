@@ -75,7 +75,7 @@ Preferred communication style: Simple, everyday language.
 ### Core Dependencies
 - **@neondatabase/serverless**: Serverless PostgreSQL driver
 - **drizzle-orm**: Type-safe ORM with PostgreSQL dialect
-- **openai**: Official OpenAI API client
+- **openai**: Official OpenAI API client for ChatGPT integration
 - **@tanstack/react-query**: Server state management
 - **@radix-ui/***: Accessible UI component primitives
 - **react-hook-form**: Form state management
@@ -88,9 +88,34 @@ Preferred communication style: Simple, everyday language.
 - **tailwindcss**: Utility-first CSS framework
 - **esbuild**: Fast JavaScript bundler for production
 
-### Optional Integrations
-- **Google Analytics**: User behavior tracking
+### Monetization Integrations
+- **Google AdSense**: Primary revenue source with 8+ ad placements
+- **Google Analytics**: User behavior tracking and conversion metrics
 - **Replit**: Development environment optimization
+
+## Recent Updates (January 2025)
+
+### Ad Monetization Optimization
+- Enhanced AdBanner component with Google AdSense compatibility
+- Added 8+ strategic ad placements: header leaderboard, sidebar skyscraper, content rectangles, footer banner, mobile sticky
+- Integrated Google AdSense script in HTML head with proper DNS prefetching
+- Created responsive ad units for all screen sizes (728x90, 336x280, 160x600, 320x50, etc.)
+
+### GitHub Pages Deployment Ready
+- Created vite.config.pages.ts for static site deployment
+- Added GitHub Actions workflow for automatic deployment
+- Included deployment script (deploy.sh) for easy setup
+- Configured proper routing for single-page application on GitHub Pages
+
+### AI Simplification
+- Simplified to use only OpenAI API (ChatGPT) instead of multiple legal APIs
+- Added proper error handling for missing API keys
+- Leveraged ChatGPT's extensive legal knowledge for document generation
+
+### Documentation & Guides
+- Created comprehensive DEPLOYMENT_GUIDE.md for GitHub Pages setup
+- Added detailed ADSENSE_GUIDE.md for monetization strategy
+- Updated README.md with complete project overview and setup instructions
 
 ## Deployment Strategy
 
