@@ -1,4 +1,4 @@
-import { Switch, Route, Link } from "wouter";
+import { Switch, Route, Link, Router } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -12,7 +12,10 @@ import DocumentTypes from "@/pages/DocumentTypes";
 import StateGuide from "@/pages/StateGuide";
 import BlogPost from "@/pages/BlogPost";
 
-function Router() {
+// Get base path for GitHub Pages deployment
+const basePath = import.meta.env.PROD ? "/legal-docs-ai" : "";
+
+function AppContent() {
   // Track page views when routes change
   useAnalytics();
   
@@ -150,7 +153,9 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <Router />
+        <Router base={basePath}>
+          <AppContent />
+        </Router>
         <Toaster />
       </TooltipProvider>
     </QueryClientProvider>

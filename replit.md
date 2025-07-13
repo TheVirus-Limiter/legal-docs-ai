@@ -95,6 +95,14 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Updates (January 2025)
 
+### GitHub Pages Routing Fix (January 13, 2025)
+- Fixed routing issues for GitHub Pages deployment at `/legal-docs-ai/` subdirectory
+- Configured Wouter router with proper base path support
+- Updated all navigation links to use correct GitHub Pages URLs
+- Fixed 404 errors when refreshing pages or direct navigation to `/templates`
+- Added Router component with base path configuration for production builds
+- All navigation now works correctly: homepage at `/legal-docs-ai/` and templates at `/legal-docs-ai/templates`
+
 ### Ad Monetization Optimization
 - Enhanced AdBanner component with Google AdSense compatibility
 - Added 8+ strategic ad placements: header leaderboard, sidebar skyscraper, content rectangles, footer banner, mobile sticky
