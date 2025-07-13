@@ -6,8 +6,9 @@ import path from 'path';
 export default defineConfig({
   plugins: [react()],
   base: process.env.NODE_ENV === 'production' ? '/legal-docs-ai/' : '/',
+  root: 'client',
   build: {
-    outDir: 'dist',
+    outDir: '../dist',
     assetsDir: 'assets',
     sourcemap: false,
     minify: 'esbuild',
