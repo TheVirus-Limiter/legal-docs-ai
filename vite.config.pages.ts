@@ -8,6 +8,9 @@ export default defineConfig({
   // GitHub Pages specific configuration
   base: '/legal-docs-ai/',
   
+  // Entry point
+  root: 'client',
+  
   // Build configuration optimized for GitHub Pages
   build: {
     outDir: 'dist',

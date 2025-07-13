@@ -103,11 +103,11 @@ export default function DocumentTypes() {
                       </div>
                       <div className="flex items-center">
                         <Users className="w-4 h-4 mr-1" />
-                        {Math.floor(Math.random() * 1000 + 500)} generated
+                        Popular template
                       </div>
                       <div className="flex items-center">
                         <Star className="w-4 h-4 mr-1 fill-current text-yellow-400" />
-                        4.{Math.floor(Math.random() * 3 + 5)}
+                        Professional
                       </div>
                     </div>
 

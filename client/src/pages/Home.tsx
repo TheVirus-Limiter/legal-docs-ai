@@ -121,16 +121,16 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-60">
             <div className="text-center">
-              <div className="text-2xl font-bold text-blue-600 mb-1">50,000+</div>
-              <div className="text-sm text-neutral-600">Documents Generated</div>
+              <div className="text-2xl font-bold text-blue-600 mb-1">Free</div>
+              <div className="text-sm text-neutral-600">Document Generation</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-blue-600 mb-1">50</div>
+              <div className="text-2xl font-bold text-blue-600 mb-1">All 50</div>
               <div className="text-sm text-neutral-600">States Covered</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-blue-600 mb-1">99.8%</div>
-              <div className="text-sm text-neutral-600">Accuracy Rate</div>
+              <div className="text-2xl font-bold text-blue-600 mb-1">Professional</div>
+              <div className="text-sm text-neutral-600">Quality Documents</div>
             </div>
             <div className="text-center">
               <div className="text-2xl font-bold text-blue-600 mb-1">24/7</div>
@@ -168,7 +168,7 @@ export default function Home() {
                       >
                         <div className="font-medium text-sm">{template.name}</div>
                         <div className="text-xs text-neutral-600">
-                          Generated {Math.floor(Math.random() * 1000 + 500)} times
+                          Popular template
                         </div>
                       </Link>
                     ))}
@@ -300,7 +300,7 @@ export default function Home() {
                     <span className="text-xs bg-green-600 text-white px-2 py-1 rounded">Free</span>
                     <div className="flex items-center text-xs text-neutral-500">
                       <Star className="w-3 h-3 mr-1 fill-current text-yellow-400" />
-                      4.{Math.floor(Math.random() * 3 + 5)} ({Math.floor(Math.random() * 300 + 100)} reviews)
+                      Professional Quality
                     </div>
                   </div>
                   <Link href="#generator">

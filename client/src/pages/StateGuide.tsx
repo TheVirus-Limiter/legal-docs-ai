@@ -37,7 +37,7 @@ export default function StateGuide() {
     {
       type: 'employment',
       name: 'Employment Contracts',
-      count: Math.floor(Math.random() * 50 + 20),
+      count: 'Available',
       requirements: [
         'At-will employment disclosure required',
         'Minimum wage compliance ($15.50/hour)',
@@ -48,7 +48,7 @@ export default function StateGuide() {
     {
       type: 'nda',
       name: 'Non-Disclosure Agreements',
-      count: Math.floor(Math.random() * 30 + 15),
+      count: 'Available',
       requirements: [
         'Trade secrets protection under state law',
         'Reasonable duration limitations',
@@ -59,7 +59,7 @@ export default function StateGuide() {
     {
       type: 'lease',
       name: 'Lease Agreements',
-      count: Math.floor(Math.random() * 40 + 25),
+      count: 'Available',
       requirements: [
         'Security deposit limitations (2x monthly rent)',
         'Habitability warranty required',
@@ -104,19 +104,19 @@ export default function StateGuide() {
                 <CardContent className="space-y-4">
                   <div className="text-center">
                     <div className="text-2xl font-bold text-blue-600">
-                      {documentTypes.reduce((sum, doc) => sum + doc.count, 0)}
+                      {documentTypes.length}
                     </div>
-                    <div className="text-sm text-neutral-600">Total Documents</div>
+                    <div className="text-sm text-neutral-600">Document Types</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-green-600">100%</div>
-                    <div className="text-sm text-neutral-600">State Compliant</div>
+                    <div className="text-2xl font-bold text-green-600">Free</div>
+                    <div className="text-sm text-neutral-600">Generation</div>
                   </div>
                   <div className="text-center">
                     <div className="text-2xl font-bold text-purple-600">
-                      {Math.floor(Math.random() * 1000 + 2000)}
+                      AI-Powered
                     </div>
-                    <div className="text-sm text-neutral-600">Generated This Month</div>
+                    <div className="text-sm text-neutral-600">Document Creation</div>
                   </div>
                 </CardContent>
               </Card>
