@@ -280,10 +280,9 @@ export default function Terms() {
                 <div>
                   <h3 className="text-xl font-semibold text-blue-800 mb-3">Contact Information</h3>
                   <div className="text-blue-700">
-                    <p><strong>Email:</strong> legal@legaldocs-ai.com</p>
-                    <p><strong>Mail:</strong> Legal Department, LegalDocs AI</p>
-                    <p>123 Legal Tech Blvd, Suite 100</p>
-                    <p>San Francisco, CA 94102</p>
+                    <p><strong>Email:</strong> legaldocsai21@gmail.com</p>
+                    <p><strong>Subject Line:</strong> Please include "Legal Inquiry" in your email subject</p>
+                    <p><strong>Response Time:</strong> Legal inquiries are typically responded to within 48 hours</p>
                   </div>
                 </div>
               </div>

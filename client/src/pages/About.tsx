@@ -159,19 +159,18 @@ export default function About() {
                 <div>
                   <h3 className="text-xl font-semibold mb-3">Business Inquiries</h3>
                   <p className="text-neutral-600">
-                    Email: business@legaldocs-ai.com<br />
-                    Phone: 1-800-LEGAL-AI<br />
-                    Address: 123 Legal Tech Blvd, Suite 100<br />
-                    San Francisco, CA 94102
+                    Email: legaldocsai21@gmail.com<br />
+                    Response Time: Within 24 hours<br />
+                    Professional Support: Available online
                   </p>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-3">Support</h3>
                   <p className="text-neutral-600">
-                    Email: support@legaldocs-ai.com<br />
+                    Email: legaldocsai21@gmail.com<br />
                     Help Center: Available 24/7<br />
                     Response Time: Within 24 hours<br />
-                    Languages: English, Spanish
+                    Languages: English
                   </p>
                 </div>
               </div>

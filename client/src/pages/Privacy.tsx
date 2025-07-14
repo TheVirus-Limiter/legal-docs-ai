@@ -285,8 +285,8 @@ export default function Privacy() {
                 If you have questions about this Privacy Policy or our data practices:
               </p>
               <div className="text-neutral-600">
-                <p><strong>Email:</strong> privacy@legaldocs-ai.com</p>
-                <p><strong>Mail:</strong> Privacy Officer, LegalDocs AI, 123 Legal Tech Blvd, Suite 100, San Francisco, CA 94102</p>
+                <p><strong>Email:</strong> legaldocsai21@gmail.com</p>
+                <p><strong>Subject Line:</strong> Please include "Privacy Inquiry" in your email subject</p>
                 <p><strong>Response Time:</strong> We respond to privacy inquiries within 30 days</p>
               </div>
             </section>

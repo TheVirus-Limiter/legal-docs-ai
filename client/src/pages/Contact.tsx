@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { AdBanner } from "@/components/AdBanner";
 import { SEOHead, SEOConfigs } from "@/components/SEOHead";
-import { Mail, Phone, MapPin, Clock, MessageSquare, HelpCircle } from "lucide-react";
+import { Mail, Globe, Clock, MessageSquare, HelpCircle } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -148,28 +148,28 @@ export default function Contact() {
                       <Mail className="text-blue-600 w-5 h-5 mt-1" />
                       <div>
                         <h4 className="font-semibold text-neutral-800">Email Support</h4>
-                        <p className="text-neutral-600">support@legaldocs-ai.com</p>
+                        <p className="text-neutral-600">legaldocsai21@gmail.com</p>
                         <p className="text-sm text-neutral-500">Response within 24 hours</p>
                       </div>
                     </div>
                     
                     <div className="flex items-start space-x-4">
-                      <Phone className="text-blue-600 w-5 h-5 mt-1" />
+                      <Mail className="text-blue-600 w-5 h-5 mt-1" />
                       <div>
-                        <h4 className="font-semibold text-neutral-800">Phone Support</h4>
-                        <p className="text-neutral-600">1-800-LEGAL-AI</p>
-                        <p className="text-sm text-neutral-500">Monday - Friday, 9 AM - 6 PM PST</p>
+                        <h4 className="font-semibold text-neutral-800">Online Support</h4>
+                        <p className="text-neutral-600">Email us for fast assistance</p>
+                        <p className="text-sm text-neutral-500">Available 24/7 via email</p>
                       </div>
                     </div>
                     
                     <div className="flex items-start space-x-4">
-                      <MapPin className="text-blue-600 w-5 h-5 mt-1" />
+                      <Globe className="text-blue-600 w-5 h-5 mt-1" />
                       <div>
-                        <h4 className="font-semibold text-neutral-800">Business Address</h4>
+                        <h4 className="font-semibold text-neutral-800">Online Service</h4>
                         <p className="text-neutral-600">
-                          123 Legal Tech Blvd, Suite 100<br />
-                          San Francisco, CA 94102<br />
-                          United States
+                          Digital-first legal document platform<br />
+                          Serving clients nationwide<br />
+                          Available online 24/7
                         </p>
                       </div>
                     </div>
@@ -199,10 +199,10 @@ export default function Contact() {
                       For partnerships, media inquiries, or business development opportunities:
                     </p>
                     <div className="space-y-2">
-                      <p className="text-neutral-800"><strong>Business Development:</strong> business@legaldocs-ai.com</p>
-                      <p className="text-neutral-800"><strong>Media & Press:</strong> press@legaldocs-ai.com</p>
-                      <p className="text-neutral-800"><strong>Partnerships:</strong> partners@legaldocs-ai.com</p>
-                      <p className="text-neutral-800"><strong>Legal Inquiries:</strong> legal@legaldocs-ai.com</p>
+                      <p className="text-neutral-800"><strong>General Inquiries:</strong> legaldocsai21@gmail.com</p>
+                      <p className="text-neutral-800"><strong>Business Development:</strong> legaldocsai21@gmail.com</p>
+                      <p className="text-neutral-800"><strong>Media & Press:</strong> legaldocsai21@gmail.com</p>
+                      <p className="text-neutral-800"><strong>Partnerships:</strong> legaldocsai21@gmail.com</p>
                     </div>
                   </CardContent>
                 </Card>
