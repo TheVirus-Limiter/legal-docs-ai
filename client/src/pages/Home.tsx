@@ -42,18 +42,24 @@ export default function Home() {
                 Create contracts, business forms, and legal documents in minutes. State-specific compliance, AI-powered customization, completely free.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <a href="#generator">
+                <a href="#generator" onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('generator')?.scrollIntoView({ behavior: 'smooth' });
+                }}>
                   <Button size="lg" className="bg-green-600 text-white hover:bg-green-700">
                     <FileText className="w-5 h-5 mr-2" />
                     Start Generating Documents
                   </Button>
                 </a>
-                <Link href="/templates">
+                <a href="#generator" onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('generator')?.scrollIntoView({ behavior: 'smooth' });
+                }}>
                   <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 bg-transparent group">
                     <FileText className="w-5 h-5 mr-2 text-white group-hover:text-blue-600" />
-                    <span className="text-white group-hover:text-blue-600">Browse Templates</span>
+                    <span className="text-white group-hover:text-blue-600">Get Started Free</span>
                   </Button>
-                </Link>
+                </a>
               </div>
               <div className="flex items-center space-x-8 text-sm">
                 <div className="flex items-center">
@@ -309,11 +315,14 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-12">
-            <Link href="#generator">
+            <a href="#generator" onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('generator')?.scrollIntoView({ behavior: 'smooth' });
+            }}>
               <Button variant="outline" size="lg" className="border-neutral-800 text-neutral-800 hover:bg-neutral-800 hover:text-white">
                 Generate Documents Now
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -352,11 +361,14 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-12">
-            <Link href="#generator">
+            <a href="#generator" onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('generator')?.scrollIntoView({ behavior: 'smooth' });
+            }}>
               <Button variant="outline" size="lg" className="border-neutral-800 text-neutral-800 hover:bg-neutral-800 hover:text-white">
                 Start Generating Documents
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>

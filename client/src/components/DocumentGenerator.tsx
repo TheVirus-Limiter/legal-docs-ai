@@ -15,6 +15,7 @@ import { StateSelector } from "./StateSelector";
 import { DocumentPreview } from "./DocumentPreview";
 import { generateDocument } from "@/lib/openai";
 import { useToast } from "@/hooks/use-toast";
+import { staticTemplates } from "@/lib/static-data";
 import type { DocumentTemplate } from "@shared/schema";
 
 const formSchema = z.object({
@@ -31,9 +32,8 @@ export function DocumentGenerator() {
   const { toast } = useToast();
   const queryClient = useQueryClient();
 
-  const { data: templates, isLoading: templatesLoading } = useQuery<DocumentTemplate[]>({
-    queryKey: ['/api/templates'],
-  });
+  const templates = staticTemplates as DocumentTemplate[];
+  const templatesLoading = false;
 
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
