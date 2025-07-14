@@ -15,6 +15,8 @@ echo "Copying static files..."
 cp client/public/sitemap.xml dist/ 2>/dev/null || echo "sitemap.xml not found, skipping"
 cp client/public/robots.txt dist/ 2>/dev/null || echo "robots.txt not found, skipping" 
 cp client/public/manifest.json dist/ 2>/dev/null || echo "manifest.json not found, skipping"
+cp client/public/favicon.ico dist/ 2>/dev/null || echo "favicon.ico not found, creating fallback"
+cp client/public/favicon.svg dist/ 2>/dev/null || echo "favicon.svg not found, creating fallback"
 
 # Create favicon files
 echo "Creating favicon..."
