@@ -121,7 +121,7 @@ export default function DocumentTypes() {
                     </div>
 
                     <div className="flex gap-2">
-                      <Link href="/" className="flex-1">
+                      <Link href="/#generator" className="flex-1">
                         <Button className="w-full bg-blue-600 hover:bg-blue-700">
                           Generate Now
                         </Button>
