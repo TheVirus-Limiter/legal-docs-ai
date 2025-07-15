@@ -5,8 +5,8 @@ import path from 'path';
 export default defineConfig({
   plugins: [react()],
   
-  // GitHub Pages specific configuration
-  base: '/legal-docs-ai/',
+  // Custom domain configuration
+  base: '/',
   
   // Entry point
   root: 'client',

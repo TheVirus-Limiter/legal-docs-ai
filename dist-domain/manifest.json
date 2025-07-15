@@ -1,0 +1,75 @@
+{
+  "name": "LegalDocs AI - Professional Legal Document Generator",
+  "short_name": "LegalDocs AI",
+  "description": "Generate professional legal documents instantly with AI. Free employment contracts, NDAs, business agreements, and more.",
+  "start_url": "/legal-docs-ai/",
+  "scope": "/legal-docs-ai/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#2563eb",
+  "background_color": "#ffffff",
+  "lang": "en-US",
+  "dir": "ltr",
+  "categories": [
+    "business",
+    "productivity",
+    "utilities",
+    "legal"
+  ],
+  "icons": [
+    {
+      "src": "/legal-docs-ai/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/legal-docs-ai/favicon-32x32.png", 
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/legal-docs-ai/apple-touch-icon.png",
+      "sizes": "180x180", 
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/legal-docs-ai/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/legal-docs-ai/android-chrome-512x512.png", 
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/legal-docs-ai/screenshot-desktop.png",
+      "sizes": "1280x720", 
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "LegalDocs AI Desktop Interface"
+    },
+    {
+      "src": "/legal-docs-ai/screenshot-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png", 
+      "form_factor": "narrow",
+      "label": "LegalDocs AI Mobile Interface"
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": "auto"
+  }
+}
