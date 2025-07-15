@@ -19,8 +19,8 @@ import Contact from "@/pages/Contact";
 import Help from "@/pages/Help";
 import Blog from "@/pages/Blog";
 
-// Get base path for GitHub Pages deployment
-const basePath = import.meta.env.PROD ? "/legal-docs-ai" : "";
+// Get base path for custom domain deployment
+const basePath = "";
 
 function AppContent() {
   // Track page views when routes change
