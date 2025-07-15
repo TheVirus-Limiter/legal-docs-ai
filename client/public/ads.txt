@@ -1,8 +1,5 @@
 # ads.txt file for legaldocs-ai.com
 # This file authorizes advertising networks to sell ads on this domain
 
-# Google AdSense - Replace XXXXXXXXXXXXXXXXX with your actual Publisher ID
-google.com, pub-XXXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
-
-# Additional ad networks can be added here
-# Format: domain, publisher_id, relationship, certification_authority_id
+# Google AdSense
+google.com, pub-1044207965107660, DIRECT, f08c47fec0942fa0

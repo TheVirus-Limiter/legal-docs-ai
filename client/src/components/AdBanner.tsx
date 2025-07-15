@@ -55,7 +55,7 @@ export function AdBanner({ size, className, label, slotId }: AdBannerProps) {
           adSizes[size]
         )}
         style={{ display: 'block' }}
-        data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX" // Replace with your AdSense client ID
+        data-ad-client="ca-pub-1044207965107660"
         data-ad-slot={slotId || "1234567890"} // Replace with your ad slot ID
         data-ad-format="auto"
         data-full-width-responsive="true"
