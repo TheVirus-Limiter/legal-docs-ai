@@ -42,22 +42,18 @@ export default function Home() {
                 Create contracts, business forms, and legal documents in minutes. State-specific compliance, AI-powered customization, completely free.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <Link to="/templates">
-                  <Button size="lg" className="bg-green-600 text-white hover:bg-green-700" onClick={() => {
-                    setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
-                  }}>
-                    <FileText className="w-5 h-5 mr-2" />
-                    Start Generating Documents
-                  </Button>
-                </Link>
-                <Link to="/templates">
-                  <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 bg-transparent group" onClick={() => {
-                    setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
-                  }}>
-                    <FileText className="w-5 h-5 mr-2 text-white group-hover:text-blue-600" />
-                    <span className="text-white group-hover:text-blue-600">Get Started Free</span>
-                  </Button>
-                </Link>
+                <Button size="lg" className="bg-green-600 text-white hover:bg-green-700" onClick={() => {
+                  document.getElementById('generator')?.scrollIntoView({ behavior: 'smooth' });
+                }}>
+                  <FileText className="w-5 h-5 mr-2" />
+                  Start Generating Documents
+                </Button>
+                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 bg-transparent group" onClick={() => {
+                  document.getElementById('generator')?.scrollIntoView({ behavior: 'smooth' });
+                }}>
+                  <FileText className="w-5 h-5 mr-2 text-white group-hover:text-blue-600" />
+                  <span className="text-white group-hover:text-blue-600">Get Started Free</span>
+                </Button>
               </div>
               <div className="flex items-center space-x-8 text-sm">
                 <div className="flex items-center">
@@ -359,13 +355,11 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-12">
-            <Link to="/templates">
-              <Button variant="outline" size="lg" className="border-neutral-800 text-neutral-800 hover:bg-neutral-800 hover:text-white" onClick={() => {
-                setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
-              }}>
-                Start Generating Documents
-              </Button>
-            </Link>
+            <Button variant="outline" size="lg" className="border-neutral-800 text-neutral-800 hover:bg-neutral-800 hover:text-white" onClick={() => {
+              document.getElementById('generator')?.scrollIntoView({ behavior: 'smooth' });
+            }}>
+              Start Generating Documents
+            </Button>
           </div>
         </div>
       </section>
