@@ -145,7 +145,25 @@ export default function DocumentTypes() {
                       </ul>
                     </div>
 
-
+                    <div className="flex gap-2">
+                      <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => {
+                        // Navigate to home and scroll to generator
+                        window.location.href = '/#generator';
+                        setTimeout(() => {
+                          const generator = document.getElementById('generator');
+                          if (generator) {
+                            generator.scrollIntoView({ behavior: 'smooth' });
+                          }
+                        }, 200);
+                      }}>
+                        Generate Now
+                      </Button>
+                      <Button variant="outline" size="default" onClick={() => {
+                        alert('Template preview coming soon! Click "Generate Now" to start creating your document.');
+                      }}>
+                        Preview
+                      </Button>
+                    </div>
                   </CardContent>
                 </Card>
               ))}
