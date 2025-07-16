@@ -376,21 +376,7 @@ export default function Home() {
         <AdBanner size="mobile-banner" className="p-0" />
       </div>
 
-      {/* Document Generator Section */}
-      <section id="generator" className="bg-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-neutral-800 mb-4">
-              Generate Your Legal Document
-            </h2>
-            <p className="text-xl text-neutral-600">
-              Select a document type below to get started with our AI-powered generator
-            </p>
-          </div>
-          
-          <DocumentGenerator />
-        </div>
-      </section>
+
     </div>
   );
 }
