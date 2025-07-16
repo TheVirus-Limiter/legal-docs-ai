@@ -147,14 +147,14 @@ export default function DocumentTypes() {
 
                     <div className="flex gap-2">
                       <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => {
-                        // Scroll to generator section on home page
+                        // Navigate to home and scroll to generator
                         window.location.href = '/#generator';
                         setTimeout(() => {
                           const generator = document.getElementById('generator');
                           if (generator) {
                             generator.scrollIntoView({ behavior: 'smooth' });
                           }
-                        }, 100);
+                        }, 200);
                       }}>
                         Generate Now
                       </Button>

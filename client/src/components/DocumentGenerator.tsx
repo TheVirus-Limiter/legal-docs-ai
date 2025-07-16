@@ -165,13 +165,29 @@ export function DocumentGenerator() {
                   <h4 className="font-semibold">{template.name}</h4>
                 </div>
                 <p className="text-sm text-neutral-600 mb-3">{template.description}</p>
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center mb-4">
                   <span className="text-xs bg-green-600 text-white px-2 py-1 rounded">Free</span>
                   <div className="flex items-center text-xs text-neutral-500">
                     <Clock className="w-3 h-3 mr-1" />
                     ~{template.estimatedTime} min
                   </div>
                 </div>
+                <Button 
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onDocumentTypeSelect(template.type);
+                    // Scroll to the form section after selection
+                    setTimeout(() => {
+                      const formSection = document.querySelector('[data-form-section]');
+                      if (formSection) {
+                        formSection.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }, 100);
+                  }}
+                >
+                  Generate Now
+                </Button>
               </div>
             ))}
           </div>
@@ -181,7 +197,7 @@ export function DocumentGenerator() {
       {/* State Selection and Form */}
       {selectedTemplate && (
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8" data-form-section>
             {/* State Selection */}
             <Card>
               <CardHeader>

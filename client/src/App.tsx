@@ -58,9 +58,19 @@ function AppContent() {
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <Link href="/" className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">
+              <button 
+                onClick={() => {
+                  // Navigate to home if not already there, then scroll to generator
+                  if (window.location.pathname !== '/') {
+                    window.location.href = '/#generator';
+                  } else {
+                    document.getElementById('generator')?.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
+              >
                 Get Started Free
-              </Link>
+              </button>
             </div>
           </div>
         </nav>
