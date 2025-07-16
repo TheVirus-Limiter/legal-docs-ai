@@ -107,34 +107,34 @@ function AppContent() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Document Types</h4>
               <ul className="space-y-2 text-neutral-300">
-                <li><Link href="/" className="hover:text-white transition-colors">Employment Contracts</Link></li>
-                <li><Link href="/" className="hover:text-white transition-colors">NDA Agreements</Link></li>
-                <li><Link href="/" className="hover:text-white transition-colors">Service Contracts</Link></li>
-                <li><Link href="/" className="hover:text-white transition-colors">Partnership Agreements</Link></li>
-                <li><Link href="/" className="hover:text-white transition-colors">Business Formation</Link></li>
-                <li><Link href="/" className="hover:text-white transition-colors">Legal Templates</Link></li>
+                <li><Link href="/templates" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Employment Contracts</Link></li>
+                <li><Link href="/templates" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>NDA Agreements</Link></li>
+                <li><Link href="/templates" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Service Contracts</Link></li>
+                <li><Link href="/templates" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Partnership Agreements</Link></li>
+                <li><Link href="/templates" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Business Formation</Link></li>
+                <li><Link href="/templates" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Legal Templates</Link></li>
               </ul>
             </div>
 
             <div>
               <h4 className="text-lg font-semibold mb-4">Resources</h4>
               <ul className="space-y-2 text-neutral-300">
-                <li><Link href="/templates" className="hover:text-white transition-colors">Document Templates</Link></li>
-                <li><Link href="/" className="hover:text-white transition-colors">AI Document Generator</Link></li>
-                <li><Link href="/" className="hover:text-white transition-colors">Free Legal Documents</Link></li>
-                <li><Link href="/" className="hover:text-white transition-colors">Business Contracts</Link></li>
-                <li><Link href="/" className="hover:text-white transition-colors">Employment Forms</Link></li>
-                <li><Link href="/" className="hover:text-white transition-colors">Privacy Policies</Link></li>
+                <li><Link href="/templates" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Document Templates</Link></li>
+                <li><Link href="/" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>AI Document Generator</Link></li>
+                <li><Link href="/templates" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Free Legal Documents</Link></li>
+                <li><Link href="/templates" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Business Contracts</Link></li>
+                <li><Link href="/templates" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Employment Forms</Link></li>
+                <li><Link href="/privacy" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Privacy Policies</Link></li>
               </ul>
             </div>
 
             <div>
               <h4 className="text-lg font-semibold mb-4">Company</h4>
               <ul className="space-y-2 text-neutral-300">
-                <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
-                <li><Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
-                <li><Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link></li>
-                <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+                <li><Link href="/about" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>About Us</Link></li>
+                <li><Link href="/privacy" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Privacy Policy</Link></li>
+                <li><Link href="/terms" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Terms of Service</Link></li>
+                <li><Link href="/contact" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Contact</Link></li>
               </ul>
             </div>
           </div>

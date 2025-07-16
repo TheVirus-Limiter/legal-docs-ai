@@ -42,24 +42,22 @@ export default function Home() {
                 Create contracts, business forms, and legal documents in minutes. State-specific compliance, AI-powered customization, completely free.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <a href="#generator" onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById('generator')?.scrollIntoView({ behavior: 'smooth' });
-                }}>
-                  <Button size="lg" className="bg-green-600 text-white hover:bg-green-700">
+                <Link to="/templates">
+                  <Button size="lg" className="bg-green-600 text-white hover:bg-green-700" onClick={() => {
+                    setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
+                  }}>
                     <FileText className="w-5 h-5 mr-2" />
                     Start Generating Documents
                   </Button>
-                </a>
-                <a href="#generator" onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById('generator')?.scrollIntoView({ behavior: 'smooth' });
-                }}>
-                  <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 bg-transparent group">
+                </Link>
+                <Link to="/templates">
+                  <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 bg-transparent group" onClick={() => {
+                    setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
+                  }}>
                     <FileText className="w-5 h-5 mr-2 text-white group-hover:text-blue-600" />
                     <span className="text-white group-hover:text-blue-600">Get Started Free</span>
                   </Button>
-                </a>
+                </Link>
               </div>
               <div className="flex items-center space-x-8 text-sm">
                 <div className="flex items-center">
@@ -361,14 +359,13 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-12">
-            <a href="#generator" onClick={(e) => {
-              e.preventDefault();
-              document.getElementById('generator')?.scrollIntoView({ behavior: 'smooth' });
-            }}>
-              <Button variant="outline" size="lg" className="border-neutral-800 text-neutral-800 hover:bg-neutral-800 hover:text-white">
+            <Link to="/templates">
+              <Button variant="outline" size="lg" className="border-neutral-800 text-neutral-800 hover:bg-neutral-800 hover:text-white" onClick={() => {
+                setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
+              }}>
                 Start Generating Documents
               </Button>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -384,6 +381,22 @@ export default function Home() {
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 z-50 md:hidden">
         <AdBanner size="mobile-banner" className="p-0" />
       </div>
+
+      {/* Document Generator Section */}
+      <section id="generator" className="bg-white py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-neutral-800 mb-4">
+              Generate Your Legal Document
+            </h2>
+            <p className="text-xl text-neutral-600">
+              Select a document type below to get started with our AI-powered generator
+            </p>
+          </div>
+          
+          <DocumentGenerator />
+        </div>
+      </section>
     </div>
   );
 }

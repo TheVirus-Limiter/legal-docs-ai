@@ -45,27 +45,18 @@ export function AdBanner({ size, className, label, slotId }: AdBannerProps) {
   }, []);
 
   return (
-    <div className={cn("bg-white border border-gray-200 rounded-lg p-2 text-center ad-container", className)}>
-      <div className="text-xs text-gray-400 mb-1">Advertisement</div>
+    <div className={cn("ad-container", className)}>
       
       {/* Google AdSense Ad Unit */}
       <ins 
-        className={cn(
-          "adsbygoogle block border-2 border-dashed border-gray-300",
-          adSizes[size]
-        )}
+        className="adsbygoogle"
         style={{ display: 'block' }}
         data-ad-client="ca-pub-1044207965107660"
         data-ad-slot={slotId || "1234567890"} // Replace with your ad slot ID
         data-ad-format="auto"
         data-full-width-responsive="true"
 
-      >
-        {/* Fallback content for development/testing */}
-        <div className="flex items-center justify-center h-full bg-gray-100 text-gray-500 text-sm font-medium">
-          {label || `Ad Space - ${adDimensions[size]}`}
-        </div>
-      </ins>
+      ></ins>
     </div>
   );
 }
