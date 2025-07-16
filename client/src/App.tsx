@@ -34,7 +34,7 @@ function AppContent() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <Link to="/">
+                <Link href="/">
                   <h1 className="text-2xl font-bold text-blue-600 cursor-pointer">
                     <i className="fas fa-file-contract mr-2"></i>LegalDocs AI
                   </h1>
@@ -42,25 +42,23 @@ function AppContent() {
               </div>
               <div className="hidden md:block ml-10">
                 <div className="flex items-baseline space-x-8">
-                  <Link to="/" className="text-neutral-600 hover:text-blue-600 px-3 py-2 text-sm font-medium">
+                  <Link href="/" className="text-neutral-600 hover:text-blue-600 px-3 py-2 text-sm font-medium">
                     Home
                   </Link>
-                  <Link to="/templates" className="text-neutral-600 hover:text-blue-600 px-3 py-2 text-sm font-medium">
+                  <Link href="/templates" className="text-neutral-600 hover:text-blue-600 px-3 py-2 text-sm font-medium">
                     Templates
                   </Link>
-                  <Link to="/blog" className="text-neutral-600 hover:text-blue-600 px-3 py-2 text-sm font-medium">
+                  <Link href="/blog" className="text-neutral-600 hover:text-blue-600 px-3 py-2 text-sm font-medium">
                     Blog
                   </Link>
-                  <Link to="/help" className="text-neutral-600 hover:text-blue-600 px-3 py-2 text-sm font-medium">
+                  <Link href="/help" className="text-neutral-600 hover:text-blue-600 px-3 py-2 text-sm font-medium">
                     Help
                   </Link>
                 </div>
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <Link to="/templates" className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors" onClick={() => {
-                setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
-              }}>
+              <Link href="/" className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">
                 Get Started Free
               </Link>
             </div>
@@ -109,34 +107,34 @@ function AppContent() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Document Types</h4>
               <ul className="space-y-2 text-neutral-300">
-                <li><Link to="/templates" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Employment Contracts</Link></li>
-                <li><Link to="/templates" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>NDA Agreements</Link></li>
-                <li><Link to="/templates" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Service Contracts</Link></li>
-                <li><Link to="/templates" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Partnership Agreements</Link></li>
-                <li><Link to="/templates" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Business Formation</Link></li>
-                <li><Link to="/templates" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Legal Templates</Link></li>
+                <li><Link href="/templates" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Employment Contracts</Link></li>
+                <li><Link href="/templates" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>NDA Agreements</Link></li>
+                <li><Link href="/templates" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Service Contracts</Link></li>
+                <li><Link href="/templates" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Partnership Agreements</Link></li>
+                <li><Link href="/templates" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Business Formation</Link></li>
+                <li><Link href="/templates" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Legal Templates</Link></li>
               </ul>
             </div>
 
             <div>
               <h4 className="text-lg font-semibold mb-4">Resources</h4>
               <ul className="space-y-2 text-neutral-300">
-                <li><Link to="/templates" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Document Templates</Link></li>
-                <li><Link to="/" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>AI Document Generator</Link></li>
-                <li><Link to="/templates" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Free Legal Documents</Link></li>
-                <li><Link to="/templates" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Business Contracts</Link></li>
-                <li><Link to="/templates" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Employment Forms</Link></li>
-                <li><Link to="/privacy" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Privacy Policies</Link></li>
+                <li><Link href="/templates" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Document Templates</Link></li>
+                <li><Link href="/" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>AI Document Generator</Link></li>
+                <li><Link href="/templates" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Free Legal Documents</Link></li>
+                <li><Link href="/templates" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Business Contracts</Link></li>
+                <li><Link href="/templates" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Employment Forms</Link></li>
+                <li><Link href="/privacy" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Privacy Policies</Link></li>
               </ul>
             </div>
 
             <div>
               <h4 className="text-lg font-semibold mb-4">Company</h4>
               <ul className="space-y-2 text-neutral-300">
-                <li><Link to="/about" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>About Us</Link></li>
-                <li><Link to="/privacy" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Privacy Policy</Link></li>
-                <li><Link to="/terms" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Terms of Service</Link></li>
-                <li><Link to="/contact" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Contact</Link></li>
+                <li><Link href="/about" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>About Us</Link></li>
+                <li><Link href="/privacy" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Privacy Policy</Link></li>
+                <li><Link href="/terms" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Terms of Service</Link></li>
+                <li><Link href="/contact" className="hover:text-white transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>Contact</Link></li>
               </ul>
             </div>
           </div>
