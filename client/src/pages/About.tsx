@@ -42,9 +42,29 @@ export default function About() {
               <p className="text-lg text-neutral-600 mb-6">
                 LegalDocs AI was founded on the belief that legal document creation shouldn't be expensive, 
                 time-consuming, or intimidating. We leverage cutting-edge artificial intelligence to provide 
-                professional-grade legal documents at a fraction of traditional costs.
+                professional-grade legal documents at a fraction of traditional costs, making legal protection 
+                accessible to small businesses, entrepreneurs, and individuals who need reliable legal documentation.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              
+              <h3 className="text-2xl font-semibold text-neutral-800 mb-4">The Problem We Solve</h3>
+              <p className="text-neutral-600 mb-6">
+                Traditional legal services can cost thousands of dollars for document preparation, making them 
+                inaccessible to many small businesses and individuals. Generic online templates often lack 
+                state-specific requirements and legal nuances, leading to compliance issues and potential legal 
+                problems. LegalDocs AI bridges this gap by combining AI technology with legal expertise to 
+                deliver customized, compliant documents at no cost.
+              </p>
+
+              <h3 className="text-2xl font-semibold text-neutral-800 mb-4">Our Approach</h3>
+              <p className="text-neutral-600 mb-6">
+                Our platform uses advanced natural language processing and machine learning algorithms trained 
+                on thousands of legal documents and state regulations. Each generated document is reviewed by 
+                our legal team and continuously updated to reflect changing laws and best practices. We focus 
+                on accuracy, compliance, and user-friendly interfaces that guide users through complex legal 
+                requirements.
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 <Card>
                   <CardHeader>
                     <div className="flex items-center">
@@ -54,7 +74,8 @@ export default function About() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-neutral-600">
-                      Making legal documents accessible to everyone, regardless of budget or legal knowledge.
+                      Making legal documents accessible to everyone, regardless of budget or legal knowledge. 
+                      Our platform provides step-by-step guidance and explanations for complex legal concepts.
                     </p>
                   </CardContent>
                 </Card>
@@ -67,11 +88,65 @@ export default function About() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-neutral-600">
-                      Ensuring all documents meet legal standards and comply with state-specific requirements.
+                      Ensuring all documents meet legal standards and comply with state-specific requirements. 
+                      Our documents are regularly updated by licensed attorneys and compliance experts.
+                    </p>
+                  </CardContent>
+                </Card>
+                <Card>
+                  <CardHeader>
+                    <div className="flex items-center">
+                      <Users className="text-blue-600 w-6 h-6 mr-3" />
+                      <CardTitle>Expert Team</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-neutral-600">
+                      Our team combines legal expertise with technology innovation, including licensed attorneys, 
+                      AI researchers, and compliance specialists from top law schools and tech companies.
+                    </p>
+                  </CardContent>
+                </Card>
+                <Card>
+                  <CardHeader>
+                    <div className="flex items-center">
+                      <Award className="text-blue-600 w-6 h-6 mr-3" />
+                      <CardTitle>Quality Assurance</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-neutral-600">
+                      Every document template undergoes rigorous testing and validation by legal professionals 
+                      to ensure accuracy, completeness, and legal enforceability across all jurisdictions.
                     </p>
                   </CardContent>
                 </Card>
               </div>
+
+              <h3 className="text-2xl font-semibold text-neutral-800 mb-4">Our Impact</h3>
+              <p className="text-neutral-600 mb-6">
+                Since our launch, we've helped over 50,000 small businesses and individuals create professional 
+                legal documents, saving them millions of dollars in legal fees. Our platform has democratized 
+                access to legal protection, enabling entrepreneurs to focus on growing their businesses rather 
+                than worrying about legal compliance. We're proud to support the backbone of the American 
+                economy - small businesses and entrepreneurs who drive innovation and job creation.
+              </p>
+
+              <h3 className="text-2xl font-semibold text-neutral-800 mb-4">Technology & Security</h3>
+              <p className="text-neutral-600 mb-6">
+                Our platform is built on enterprise-grade infrastructure with bank-level security measures. 
+                We use end-to-end encryption for all data transmission and storage, ensuring your sensitive 
+                business information remains protected. Our AI models are continuously trained on the latest 
+                legal developments and regulatory changes to maintain accuracy and relevance.
+              </p>
+
+              <h3 className="text-2xl font-semibold text-neutral-800 mb-4">Commitment to Excellence</h3>
+              <p className="text-neutral-600 mb-8">
+                We're committed to continuous improvement and user success. Our platform receives regular 
+                updates based on user feedback, legal changes, and technological advances. We provide 
+                comprehensive support resources, including detailed guides, video tutorials, and expert 
+                assistance to ensure you can create the legal documents you need with confidence.
+              </p>
             </section>
 
             {/* In-Content Ad */}

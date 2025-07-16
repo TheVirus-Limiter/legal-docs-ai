@@ -59,7 +59,7 @@ export function AdBanner({ size, className, label, slotId }: AdBannerProps) {
         data-ad-slot={slotId || "1234567890"} // Replace with your ad slot ID
         data-ad-format="auto"
         data-full-width-responsive="true"
-        data-ad-test="on" // Remove this in production
+
       >
         {/* Fallback content for development/testing */}
         <div className="flex items-center justify-center h-full bg-gray-100 text-gray-500 text-sm font-medium">

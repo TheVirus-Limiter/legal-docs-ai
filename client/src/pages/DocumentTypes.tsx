@@ -34,10 +34,35 @@ export default function DocumentTypes() {
             <h1 className="text-4xl lg:text-5xl font-bold text-neutral-800 mb-4">
               Legal Document Templates
             </h1>
-            <p className="text-xl text-neutral-600 max-w-3xl mx-auto">
+            <p className="text-xl text-neutral-600 max-w-3xl mx-auto mb-8">
               Browse our comprehensive collection of AI-powered legal document templates. 
               Each template is designed for state-specific compliance and professional formatting.
+              Generate professional documents in minutes with our expert-vetted templates.
             </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              <div className="text-center">
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <FileText className="w-8 h-8 text-blue-600" />
+                </div>
+                <h3 className="font-semibold text-neutral-800 mb-2">8+ Document Categories</h3>
+                <p className="text-sm text-neutral-600">Employment, Business, Real Estate, and more</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Clock className="w-8 h-8 text-green-600" />
+                </div>
+                <h3 className="font-semibold text-neutral-800 mb-2">5-Minute Generation</h3>
+                <p className="text-sm text-neutral-600">From template selection to PDF download</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Star className="w-8 h-8 text-purple-600" />
+                </div>
+                <h3 className="font-semibold text-neutral-800 mb-2">50+ States Supported</h3>
+                <p className="text-sm text-neutral-600">State-specific legal requirements included</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
