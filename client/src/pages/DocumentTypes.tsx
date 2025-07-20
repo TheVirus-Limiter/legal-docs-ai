@@ -25,7 +25,7 @@ export default function DocumentTypes() {
   return (
     <div className="min-h-screen bg-neutral-50">
       {/* Header Ad */}
-      <AdBanner size="leaderboard" className="max-w-7xl mx-auto px-4 py-2" />
+      <AdBanner size="leaderboard" className="max-w-7xl mx-auto px-4 py-2" placeholderId="ezoic-pub-ad-placeholder-201" />
 
       {/* Header */}
       <section className="bg-white border-b border-gray-200">
@@ -72,7 +72,7 @@ export default function DocumentTypes() {
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <div className="sticky top-24 space-y-6">
-              <AdBanner size="skyscraper" />
+              <AdBanner size="skyscraper" placeholderId="ezoic-pub-ad-placeholder-202" />
               
               <Card>
                 <CardHeader>

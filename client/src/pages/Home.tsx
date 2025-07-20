@@ -27,7 +27,7 @@ export default function Home() {
     <div className="min-h-screen bg-neutral-50">
       <SEOHead {...SEOConfigs.home} />
       {/* Header Ad */}
-      <AdBanner size="leaderboard" className="max-w-7xl mx-auto px-4 py-2" />
+      <AdBanner size="leaderboard" className="max-w-7xl mx-auto px-4 py-2" placeholderId="ezoic-pub-ad-placeholder-101" />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20">
@@ -103,7 +103,7 @@ export default function Home() {
 
       {/* First Ad Break */}
       <div className="bg-neutral-100 py-4">
-        <AdBanner size="medium-rectangle" className="max-w-7xl mx-auto px-4" />
+        <AdBanner size="medium-rectangle" className="max-w-7xl mx-auto px-4" placeholderId="ezoic-pub-ad-placeholder-102" />
       </div>
 
       {/* Trust Indicators */}
@@ -137,7 +137,7 @@ export default function Home() {
 
       {/* In-Content Ad */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <AdBanner size="rectangle" />
+        <AdBanner size="rectangle" placeholderId="ezoic-pub-ad-placeholder-103" />
       </div>
 
       {/* Document Generator Section */}
@@ -147,7 +147,7 @@ export default function Home() {
             {/* Sidebar Ad */}
             <div className="lg:col-span-1 order-last lg:order-first">
               <div className="sticky top-24 space-y-6">
-                <AdBanner size="skyscraper" />
+                <AdBanner size="skyscraper" placeholderId="ezoic-pub-ad-placeholder-104" />
                 
                 {/* Popular Documents */}
                 <Card>
@@ -267,7 +267,7 @@ export default function Home() {
 
       {/* In-Content Ad */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <AdBanner size="rectangle" />
+        <AdBanner size="rectangle" placeholderId="ezoic-pub-ad-placeholder-105" />
       </div>
 
       {/* Templates Section */}
@@ -323,7 +323,7 @@ export default function Home() {
 
       {/* In-Content Ad */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <AdBanner size="rectangle" />
+        <AdBanner size="rectangle" placeholderId="ezoic-pub-ad-placeholder-106" />
       </div>
 
       {/* State-Specific Section */}
@@ -367,13 +367,13 @@ export default function Home() {
       {/* Footer Ad */}
       <div className="bg-neutral-800 py-8">
         <div className="max-w-7xl mx-auto px-4">
-          <AdBanner size="leaderboard" className="bg-neutral-700 border-neutral-600" />
+          <AdBanner size="leaderboard" className="bg-neutral-700 border-neutral-600" placeholderId="ezoic-pub-ad-placeholder-107" />
         </div>
       </div>
 
       {/* Mobile Sticky Ad */}
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 z-50 md:hidden">
-        <AdBanner size="mobile-banner" className="p-0" />
+        <AdBanner size="mobile-banner" className="p-0" placeholderId="ezoic-pub-ad-placeholder-108" />
       </div>
 
 

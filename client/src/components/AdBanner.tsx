@@ -4,8 +4,7 @@ import { useEffect } from "react";
 interface AdBannerProps {
   size: 'leaderboard' | 'rectangle' | 'skyscraper' | 'mobile-banner' | 'large-rectangle' | 'wide-skyscraper' | 'banner' | 'medium-rectangle';
   className?: string;
-  label?: string;
-  slotId?: string;
+  placeholderId?: string;
 }
 
 const adSizes = {
@@ -30,40 +29,47 @@ const adDimensions = {
   'medium-rectangle': '300x250'
 };
 
-export function AdBanner({ size, className, label, slotId }: AdBannerProps) {
-  const adId = `ad-${size}-${Math.random().toString(36).substr(2, 9)}`;
+export function AdBanner({ size, className, placeholderId }: AdBannerProps) {
+  const adId = placeholderId || `ezoic-pub-ad-placeholder-${Math.random().toString(36).substr(2, 9)}`;
 
   useEffect(() => {
-    // Initialize Google AdSense when component mounts
-    if (typeof window !== 'undefined' && window.adsbygoogle) {
+    // Initialize Ezoic ads when component mounts
+    if (typeof window !== 'undefined' && window.ezstandalone) {
       try {
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
+        window.ezstandalone.cmd = window.ezstandalone.cmd || [];
+        window.ezstandalone.cmd.push(function() {
+          window.ezstandalone.define(adId);
+        });
       } catch (error) {
-        console.warn('AdSense initialization failed:', error);
+        console.warn('Ezoic ad initialization failed:', error);
       }
     }
-  }, []);
+  }, [adId]);
 
   return (
     <div className={cn("ad-container", className)}>
-      
-      {/* Google AdSense Ad Unit */}
-      <ins 
-        className="adsbygoogle"
-        style={{ display: 'block' }}
-        data-ad-client="ca-pub-1044207965107660"
-        data-ad-slot={slotId || "1234567890"} // Replace with your ad slot ID
-        data-ad-format="auto"
-        data-full-width-responsive="true"
-
-      ></ins>
+      {/* Ezoic Ad Placeholder */}
+      <div 
+        id={adId}
+        className={cn("ezoic-ad", adSizes[size])}
+        style={{ 
+          minHeight: size === 'leaderboard' ? '90px' : 
+                    size === 'rectangle' || size === 'medium-rectangle' ? '250px' : 
+                    size === 'mobile-banner' ? '50px' : '280px',
+          display: 'block',
+          margin: '0 auto'
+        }}
+      />
     </div>
   );
 }
 
-// Declare AdSense global
+// Declare Ezoic global
 declare global {
   interface Window {
-    adsbygoogle: any[];
+    ezstandalone: {
+      cmd: Array<() => void>;
+      define: (id: string) => void;
+    };
   }
 }

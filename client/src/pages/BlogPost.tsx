@@ -58,7 +58,7 @@ export default function BlogPost() {
     <div className="min-h-screen bg-neutral-50">
       {post && <SEOHead {...createBlogPostSEO(post)} />}
       {/* Header Ad */}
-      <AdBanner size="leaderboard" className="max-w-7xl mx-auto px-4 py-2" />
+      <AdBanner size="leaderboard" className="max-w-7xl mx-auto px-4 py-2" placeholderId="ezoic-pub-ad-placeholder-401" />
 
       {/* Back Navigation */}
       <div className="bg-white border-b">
@@ -126,7 +126,7 @@ export default function BlogPost() {
 
               {/* In-Content Ad */}
               <div className="p-8 border-b">
-                <AdBanner size="rectangle" />
+                <AdBanner size="rectangle" placeholderId="ezoic-pub-ad-placeholder-402" />
               </div>
 
               {/* Article Content */}
@@ -178,7 +178,7 @@ export default function BlogPost() {
 
             {/* Bottom Ad */}
             <div className="mt-8">
-              <AdBanner size="rectangle" />
+              <AdBanner size="rectangle" placeholderId="ezoic-pub-ad-placeholder-403" />
             </div>
 
             {/* Related Articles */}

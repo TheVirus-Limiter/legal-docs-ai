@@ -8,7 +8,7 @@ export default function About() {
     <div className="min-h-screen bg-neutral-50">
       <SEOHead {...SEOConfigs.about} />
       {/* Header Ad */}
-      <AdBanner size="leaderboard" className="max-w-7xl mx-auto px-4 py-2" />
+      <AdBanner size="leaderboard" className="max-w-7xl mx-auto px-4 py-2" placeholderId="ezoic-pub-ad-placeholder-301" />
 
       {/* Hero Section */}
       <section className="bg-white py-16 border-b">
@@ -30,7 +30,7 @@ export default function About() {
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <div className="sticky top-24">
-              <AdBanner size="skyscraper" />
+              <AdBanner size="skyscraper" placeholderId="ezoic-pub-ad-placeholder-302" />
             </div>
           </div>
 
@@ -150,7 +150,7 @@ export default function About() {
             </section>
 
             {/* In-Content Ad */}
-            <AdBanner size="rectangle" />
+            <AdBanner size="rectangle" placeholderId="ezoic-pub-ad-placeholder-303" />
 
             {/* Technology */}
             <section>
@@ -252,7 +252,7 @@ export default function About() {
             </section>
 
             {/* Bottom Ad */}
-            <AdBanner size="rectangle" />
+            <AdBanner size="rectangle" placeholderId="ezoic-pub-ad-placeholder-304" />
           </div>
         </div>
       </div>

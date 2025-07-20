@@ -1,5 +1,10 @@
 # ads.txt file for legaldocs-ai.com
 # This file authorizes advertising networks to sell ads on this domain
 
-# Google AdSense
-google.com, pub-1044207965107660, DIRECT, f08c47fec0942fa0
+# Ezoic - Primary ad provider
+ezoic.com, DIRECT
+google.com, pub-6373315980741255, RESELLER, f08c47fec0942fa0
+
+# Note: Replace this file with your actual Ezoic-generated ads.txt 
+# Download from your Ezoic dashboard: Settings > Ads.txt
+# The above are placeholder values - use your actual Ezoic publisher ID
